@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
-public class DebugFour4
-{
-    public static void main(String[] args)
-    {
+public class DebugFour4 {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         String destinationCity;
@@ -12,7 +10,7 @@ public class DebugFour4
 
         DebugTrip trip1;
         DebugTrip trip2;
-        DebugTrip trip3;   
+        DebugTrip trip3;
 
         System.out.print("Enter destination city >> ");
         destinationCity = input.nextLine();
@@ -27,15 +25,17 @@ public class DebugFour4
         trip2 = new DebugTrip(destinationCity, departureCity);
         trip3 = new DebugTrip(destinationCity, departureCity, mode);
 
+        System.out.println("\nTrip 1:");
         display(trip1);
+        System.out.println("\nTrip 2:");
         display(trip2);
+        System.out.println("\nTrip 3:");
         display(trip3);
     }
 
-    public static void display(DebugTrip trip)
-    {
+    public static void display(DebugTrip trip) {
         System.out.println("Going to " + trip.getDestination());
-        System.out.println("Leaving from " + trip.getDepartureCity());  
+        System.out.println("Leaving from " + trip.getDepartureCity());
         System.out.println("Going by " + trip.getMode());
     }
 }
